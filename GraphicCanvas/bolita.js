@@ -15,17 +15,22 @@ function hslColor(h){
 
 function bolita(x,y){
     ctx.fillStyle = hslColor(ini);
-    ini += 20;
+    ini += 2;
     ctx.beginPath();
     ctx.arc(x,y,32,0,Math.PI *2);
     ctx.fill();
-    ctx.stroke();
+
 }
 
-setInterval (() => {
-    // ctx.clearRect(0,0,600,400);
-    bolita(idx, idy);
 
+
+setInterval (() => {
+    //ctx.clearRect(0,0,650,400);
+    bolita(idx, idy);
+    idx++;
+    if(idx > 650 ) idx = 0;
+
+    
     if(dirX === 1 && dirY === 1){
         idx += 1;
         idy += 1;
@@ -42,7 +47,6 @@ setInterval (() => {
     // cambiar direcciones
     if(idx > 640) dirX =2;
     if(idx < 20) dirX =1;
-    if(idy > 380) dirY =2;
+    if(idy > 390) dirY =2;
     if(idy < 20) dirY =1;
-    
 }, 0);
