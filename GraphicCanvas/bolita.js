@@ -45,8 +45,8 @@ setInterval (() => {
         idy -= 1; 
     }
     // cambiar direcciones
-    if(idx > 640) dirX =2;
+    if(idx > 600) dirX =1;
     if(idx < 20) dirX =1;
     if(idy > 390) dirY =2;
     if(idy < 20) dirY =1;
-}, 0);
+}, 10);
